@@ -261,6 +261,13 @@ h2, h3, h4, h5, h5 {
     background: $marked;
 }
 
+.bin-description {
+    font-size: 0.85rem;
+    color: inherit;
+    opacity: 0.75;
+    margin: 0.4em 0;
+}
+
 .filter-name {
     font-size: 1.4rem;
     font-weight: bold;

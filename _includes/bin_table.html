@@ -53,10 +53,10 @@
             </tr>
         </thead>
         <tbody>
-	    {% assign sites = site.OffSecToolKit | reverse %} 
+	    {% assign sites = site.OffSecToolKit | reverse %}
             {% for file in sites %}
             <tr>
-		    <td><div class="bin-name"><div style="flex: 0 0 97%"><a href="{{ file.url }}" id="{{ file.url }}" style="text-decoration: none; color: DarkGreen;">{{ file.command | escape }}</a></div><div style="flex: 1;"><a href="javascript:void(0)" onClick="copyFunction('{{ file.url }}')"><img src="{{ site.url }}/assets/copy-button.svg" alt="Copy" title="Copy" id="{{ file.url }}_img"/></a></div></div><p style="margin-top: -12px;">{% include filter_list.html bin=file %}</p></td>
+		    <td><div class="bin-name"><div style="flex: 0 0 97%"><a href="{{ file.url }}" id="{{ file.url }}" style="text-decoration: none; color: DarkGreen;">{{ file.command | escape }}</a></div><div style="flex: 1;"><a href="javascript:void(0)" onClick="copyFunction('{{ file.url }}')"><img src="{{ site.url }}/assets/copy-button.svg" alt="Copy" title="Copy" id="{{ file.url }}_img"/></a></div></div>{% assign short_desc = file.description | split: "Command Reference:" | first | strip_newlines | strip | truncatewords: 35 %}<p class="bin-description">{{ short_desc }}</p><p style="margin-top: -12px;">{% include filter_list.html bin=file %}</p></td>
             </tr>
             {% endfor %}
         </tbody>
@@ -97,7 +97,7 @@
 	 } else {
 		 document.getElementById(label).className = "";
 		 document.getElementById(label + "_label").innerText = label;
-		 label = label.replace(" ", "%20");
+		 label = label.replace(/ /g, "%20");
 		 var new_href = window.location.href.replace("+"+label, "");
 		 window.location.href = new_href;
 		 if (window.location.hash == "") {
