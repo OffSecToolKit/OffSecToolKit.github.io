@@ -30,3 +30,11 @@ PFX:
 Shell:
   label: Shell
   description: You have a shell on the Windows host and need to know what you can do.
+
+API_Key:
+  label: API Key
+  description: You've found a cloud API key, access key, or service principal secret (e.g. AWS Access Key, Azure App secret) and need to know what you can do with it.
+
+Wordlist:
+  label: Wordlist
+  description: You have (or need to generate) a wordlist and need to know what you can do with it.

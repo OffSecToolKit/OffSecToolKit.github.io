@@ -14,3 +14,19 @@ PrivEsc:
 InfoCollection:
   label: High-Value Information Collection
   description: Commands focused on high-value information collection.
+
+Recon:
+  label: Reconnaissance
+  description: Commands focused on passive/active reconnaissance and OSINT prior to gaining a foothold.
+
+CredentialAccess:
+  label: Credential Access
+  description: Commands focused on obtaining, spraying, or cracking credentials.
+
+PostExploitation:
+  label: Post-Exploitation
+  description: Commands focused on operating through a C2 framework or agent after initial compromise.
+
+Pivoting:
+  label: Pivoting
+  description: Commands focused on tunneling and pivoting through a compromised host to reach additional network segments.

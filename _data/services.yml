@@ -86,3 +86,23 @@ NTLM:
 DNS:
   label: DNS
   description: Commands related to the DNS service.
+
+ADCS:
+  label: AD Certificate Services
+  description: You've found Active Directory Certificate Services (ADCS) in the environment and need to know what you can do with it.
+
+AWS:
+  label: AWS
+  description: You're targeting an Amazon Web Services (AWS) cloud environment and need to know what you can do with it.
+
+Azure:
+  label: Azure
+  description: You're targeting an Azure/Entra ID cloud environment and need to know what you can do with it.
+
+GCP:
+  label: GCP
+  description: You're targeting a Google Cloud Platform (GCP) environment and need to know what you can do with it.
+
+Kubernetes:
+  label: Kubernetes
+  description: You've found a Kubernetes API/cluster and need to know what you can do with it.
