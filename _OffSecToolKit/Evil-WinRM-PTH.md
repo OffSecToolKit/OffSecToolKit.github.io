@@ -1,6 +1,6 @@
 ---
 description: |
-  Evil-WinRM uses the Windows Management Instrumentation (WMI) to give you an interactive shell on the Windows host. Evil-WinRM supports passing the victim's NT hash for authorization.
+  Evil-WinRM uses Windows Remote Management (WinRM) to give you an interactive shell on the Windows host. Evil-WinRM supports passing the victim's NT hash for authorization.
 
   Command Reference:
 
@@ -17,7 +17,7 @@ items:
   - Username
   - Hash
 services:
-  - WMI
+  - WinRM
 OS:
   - Linux
   - Windows

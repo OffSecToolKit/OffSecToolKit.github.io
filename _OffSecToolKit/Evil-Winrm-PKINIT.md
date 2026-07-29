@@ -1,6 +1,6 @@
 ---
 description: |
-  Evil-WinRM uses the Windows Management Instrumentation (WMI) to give you an interactive shell on the Windows host. Winrm Supports PKINIT, meaning if you have a computers PFX file, you can authenticate and get a shell. Note that the command requires a public and a private key in PEM format, that can be extracted by converting the PFX to PEM format. Take a look at the references for more info on that. Password protected PFX files can be cracked with JohnTheRipper.
+  Evil-WinRM uses Windows Remote Management (WinRM) to give you an interactive shell on the Windows host. WinRM Supports PKINIT, meaning if you have a computers PFX file, you can authenticate and get a shell. Note that the command requires a public and a private key in PEM format, that can be extracted by converting the PFX to PEM format. Take a look at the references for more info on that. Password protected PFX files can be cracked with JohnTheRipper.
 
   Command Reference:
 
@@ -15,7 +15,7 @@ command: |
 items:
   - PFX
 services:
-  - WMI
+  - WinRM
 OS:
   - Windows
 phases:

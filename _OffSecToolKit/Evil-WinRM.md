@@ -1,6 +1,6 @@
 ---
 description: |
-  Evil-WinRM uses the Windows Management Instrumentation (WMI) to give you an interactive shell on the Windows host.
+  Evil-WinRM uses Windows Remote Management (WinRM) to give you an interactive shell on the Windows host.
 
   Command Reference:
 
@@ -16,7 +16,7 @@ items:
   - Password
   - Username
 services:
-  - WMI
+  - WinRM
 OS:
   - Linux
   - Windows

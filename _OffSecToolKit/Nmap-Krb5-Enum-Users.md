@@ -15,7 +15,6 @@ items:
   - No_Creds
 services:
   - Kerberos
-  - Enumeration
 OS:
   - Linux
   - Windows
