@@ -145,7 +145,7 @@
 
          var binName = row.children[0].firstElementChild.innerText.toLowerCase();
 	     
-         var functionElems = Array.from(row.children[0].childNodes[2].children);
+         var functionElems = Array.from(row.querySelectorAll('.filter-list li'));
 	 
          if (show) {
              functionElems.forEach((item) => {
