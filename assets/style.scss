@@ -241,15 +241,129 @@ h2, h3, h4, h5, h5 {
     }
 }
 
+// site header
+
+.site-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px 24px;
+    padding: 18px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $lighter;
+}
+
+.brand, .brand-crumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+}
+
+.brand-name {
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: inherit;
+}
+
+.brand-crumb {
+    font-weight: 700;
+    font-size: 1.15rem;
+
+    .sep {
+        color: inherit;
+        opacity: 0.5;
+        font-weight: 400;
+    }
+
+    .current {
+        font-family: monospace;
+        font-size: 1rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.site-nav {
+    display: flex;
+    gap: 16px;
+    font-size: 0.9rem;
+
+    a:link, a:visited {
+        color: inherit;
+        opacity: 0.65;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: $accent;
+        opacity: 1;
+    }
+}
+
+.theme-toggle {
+    border: 1px solid $lighter;
+    background: transparent;
+    border-radius: 999px;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: inherit;
+    flex: none;
+
+    &:hover {
+        border-color: $accent;
+        color: $accent;
+    }
+
+    svg {
+        width: 17px;
+        height: 17px;
+    }
+
+    .icon-sun { display: none; }
+    .icon-moon { display: block; }
+
+    &[aria-pressed="true"] {
+        .icon-sun { display: block; }
+        .icon-moon { display: none; }
+    }
+}
+
 // other classes
 
+.hero {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: clamp(20px, 4vw, 40px);
+    margin-bottom: 20px;
+
+    p {
+        flex: 1 1 320px;
+        min-width: 260px;
+        margin: 0;
+    }
+}
+
 .logo {
-    $margin: 20px;
-    float: right;
-    width: 100px;
-    height: 100px;
-    margin-left: $margin;
-    margin-bottom: $margin;
+    width: clamp(90px, 20vw, 160px);
+    height: auto;
+    flex: none;
+    margin: 0;
 }
 
 .bin-name {
@@ -275,70 +389,9 @@ h2, h3, h4, h5, h5 {
 
 .github-buttons {
     display: inline-block;
-    margin-left: 10px;
 
     // avoid displaying the link text during loading
     a.github-button {
         visibility: hidden;
     }
 }
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 100px;
-    height: 40px;
-    margin-bottom: -10px;
-    margin-left: 10px;
-  }
-  
-  .switch input {display:none;}
-  
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    -webkit-transition: .4s;
-    background-image: url(night.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    transition: .4s;
-  }
-  
-  .slider:before +.slider::before{
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    -webkit-transition: .4s;
-    transition: .4s;
-    background-image: url(night.jpg);
-  }
-  
-  input:checked + .slider {
-    background-image: url(day.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
-  .slider.round {
-    border-radius: 34px;
-
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }

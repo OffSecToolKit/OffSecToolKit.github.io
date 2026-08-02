@@ -1,19 +1,33 @@
-<h1>
-    {% if page.url != '/' %}
-    <a href="/">..</a> /
-    {% endif %}
-    {{ include.title }}
-    <div class="github-buttons">
-        <a class="github-button" href="https://github.com/OffSecToolKit/OffSecToolKit.github.io" data-icon="octicon-star" data-show-count="true" aria-label="Star OffSecToolKit/OffSecToolKit.github.io on GitHub">Star</a>
-        <label class="switch">
-            <input type="checkbox">
-            <span class="slider round"></span>
-        </label>
-        <script type="text/javascript">        
-            if(localStorage["style"]=="true"){
-                document.getElementById('pagestyle').setAttribute('href','{{ site.url }}/assets/styleDark.css');
-                document.querySelector('input[type="checkbox"]').checked = true
-            }
-        </script>
+<header class="site-header">
+    {% if page.url == '/' %}
+    <div class="brand">
+        <a href="{{ site.url }}/"><img src="{{ site.url }}/assets/icon.png" alt="" width="34" height="34"></a>
+        <a href="{{ site.url }}/" class="brand-name">{{ include.title }}</a>
     </div>
-</h1>
+    {% else %}
+    <div class="brand-crumb">
+        <a href="{{ site.url }}/">..</a><span class="sep">/</span><span class="current">{{ include.title }}</span>
+    </div>
+    {% endif %}
+    <div class="header-right">
+        <nav class="site-nav">
+            <a href="{{ site.url }}/">Home</a>
+            <a href="{{ site.url }}/items/">Items</a>
+            <a href="{{ site.url }}/filters/">Filters</a>
+            <a href="{{ site.url }}/contribute/">Contribute</a>
+        </nav>
+        <span class="github-buttons">
+            <a class="github-button" href="https://github.com/OffSecToolKit/OffSecToolKit.github.io" data-icon="octicon-star" data-show-count="true" aria-label="Star OffSecToolKit/OffSecToolKit.github.io on GitHub">Star</a>
+        </span>
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"></path></svg>
+        </button>
+    </div>
+</header>
+<script>
+    if (localStorage["style"] == "true") {
+        document.getElementById('pagestyle').setAttribute('href', '{{ site.url }}/assets/styleDark.css');
+        document.getElementById('theme-toggle').setAttribute('aria-pressed', 'true');
+    }
+</script>
