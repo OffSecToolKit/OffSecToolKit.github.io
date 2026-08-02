@@ -190,23 +190,22 @@
 	     });
 
          }
-	 var filled = true;
 	 var found_binName = false;
          if (binName.indexOf(binPattern) !== -1 && binPattern.length !== 0) {
 		 found_binName = true;
 	 }
 
-	 functionElems.forEach((i) => {
-	     {% for item_pair in site.data.items %}
-	     {% assign item_id = item_pair[0] %}
-	     {% assign item = item_pair[1] %}
-	     
-		 if (i.innerText.toLowerCase() == "{{ item.label | downcase }}" && i.className !== "match") {
-	         filled = false;
-	     }
-
-	     {% endfor %}
-	 });
+	 var found_item = -1;
+	 if (item_chosen.length !== 0) {
+		 found_item = 0;
+		 item_chosen.forEach((it) => {
+			 functionElems.forEach((i) => {
+				 if (i.innerText.toLowerCase() == it) {
+					 found_item = found_item + 1;
+				 }
+			 });
+		 });
+	 }
 
 	 var found_filter = -1;
 	 if (filter_chosen.length !== 0) {
@@ -244,7 +243,7 @@
 		 });
 	 }
 
-	 if ((!filled && (found_phase < 1 && found_filter < 1 && found_os < 1 && !found_binName)) || (found_phase == 0 || found_filter == 0 || found_os == 0) || (!filled && item_chosen.length !== 0) || ((found_phase !== phase_chosen.length && found_phase !== -1) || (found_filter !== filter_chosen.length && found_filter !== -1) || (found_os !== os_chosen.length && found_os !== -1)) || (binPattern.length !== 0 && !found_binName)) {
+	 if ((found_phase == 0 || found_filter == 0 || found_os == 0 || found_item == 0) || ((found_phase !== phase_chosen.length && found_phase !== -1) || (found_filter !== filter_chosen.length && found_filter !== -1) || (found_os !== os_chosen.length && found_os !== -1) || (found_item !== item_chosen.length && found_item !== -1)) || (binPattern.length !== 0 && !found_binName)) {
 		row.style.display = 'none';
 	 } else {
 	    	row.style.display = '';
