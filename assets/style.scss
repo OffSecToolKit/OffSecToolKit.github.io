@@ -352,10 +352,19 @@ h2, h3, h4, h5, h5 {
     gap: clamp(20px, 4vw, 40px);
     margin-bottom: 20px;
 
+    // kramdown wraps the logo image in its own <p>; only the text
+    // paragraph (the second child) should grow to fill the row
     p {
-        flex: 1 1 320px;
-        min-width: 260px;
         margin: 0;
+
+        &:first-child {
+            flex: none;
+        }
+
+        &:not(:first-child) {
+            flex: 1 1 320px;
+            min-width: 260px;
+        }
     }
 }
 
