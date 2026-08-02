@@ -18,6 +18,7 @@ OS:
   - Windows
 phases:
   - Enumeration
+  - InfoCollection
 references:
   - https://github.com/SnaffCon/Snaffler
 ---

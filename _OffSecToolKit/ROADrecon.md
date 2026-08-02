@@ -26,5 +26,5 @@ phases:
   - Enumeration
 references:
   - https://github.com/dirkjanm/ROADtools
-  - https://roadtools.readthedocs.io/en/latest/roadrecon.html
+  - https://github.com/dirkjanm/ROADtools/wiki/Getting-started-with-ROADrecon
 ---

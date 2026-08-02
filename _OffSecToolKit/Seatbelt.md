@@ -19,5 +19,5 @@ phases:
   - Persistence
 references:
   - https://github.com/GhostPack/Seatbelt
-  - https://www.harmj0y.net/blog/redteaming/ghostpack/
+  - https://blog.harmj0y.net/redteaming/ghostpack/
 ---

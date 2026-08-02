@@ -5,7 +5,7 @@ description: |
   Command Reference:
 
       Username: john
-    
+
       Target: 10.10.10.1
 
 command: |

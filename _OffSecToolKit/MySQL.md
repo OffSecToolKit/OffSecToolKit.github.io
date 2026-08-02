@@ -7,7 +7,7 @@ description: |
       Username: john
 
       Password: password123
-    
+
       Target: 10.10.10.1
 
 command: |

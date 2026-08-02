@@ -3,7 +3,7 @@ description: |
   WhatWeb identifies websites. The following command identifies the technology powering a web page.
 
   Command Reference:
-    
+
       Aggressive level: 3
 
       Target: https://www.facebook.com
@@ -21,5 +21,4 @@ phases:
   - Enumeration
 references:
   - https://github.com/urbanadventurer/WhatWeb/wiki
-  - https://morningstarsecurity.com/research/whatweb
 ---

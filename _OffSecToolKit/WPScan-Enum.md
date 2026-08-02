@@ -18,5 +18,5 @@ phases:
   - Enumeration
 references:
   - https://github.com/wpscanteam/wpscan
-  - https://wpscan.com/docs
+  - https://github.com/wpscanteam/wpscan/wiki/WPScan-User-Documentation
 ---

@@ -16,5 +16,5 @@ phases:
   - PrivEsc
 references:
   - https://github.com/GhostPack/SharpUp
-  - https://www.harmj0y.net/blog/redteaming/ghostpack/
+  - https://blog.harmj0y.net/redteaming/ghostpack/
 ---

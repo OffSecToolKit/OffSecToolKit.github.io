@@ -1,7 +1,7 @@
-# OSTK [![Build Status][]][travis]
+# OSTK [![Lint][]][actions]
 
- [Build Status]: https://travis-ci.org/ostk/thetonyharkness.gihub.io.svg?branch=main
-[travis]: https://travis-ci.org/ostk/thetonyharkness.github.io
+ [Lint]: https://github.com/OffSecToolKit/OffSecToolKit.github.io/actions/workflows/lint.yml/badge.svg
+[actions]: https://github.com/OffSecToolKit/OffSecToolKit.github.io/actions/workflows/lint.yml
 
 OffSecToolKit is an interactive cheat sheet, containing a curated list of offensive security tools and their respective commands.
 

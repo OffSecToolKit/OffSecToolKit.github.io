@@ -15,7 +15,7 @@ description: |
   	Password: password123
 
 command: |
-  python3 FindUncommonShares.py -u 'john' -d 'TEST.local' -p 'password123' --dc-ip 10.10.10.1
+  python3 FindUncommonShares.py -au 'john' -ap 'password123' -ad 'test.local' --auth-dc-ip 10.10.10.1
 items:
   - Password
   - Username
@@ -28,5 +28,5 @@ OS:
 phases:
   - Enumeration
 references:
-  - https://github.com/p0dalirius/FindUncommonShares
+  - https://github.com/p0dalirius/pyFindUncommonShares
 ---

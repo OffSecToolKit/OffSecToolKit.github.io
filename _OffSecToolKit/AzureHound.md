@@ -26,5 +26,5 @@ phases:
   - Enumeration
 references:
   - https://github.com/SpecterOps/AzureHound
-  - https://bloodhound.specterops.io/collect-data/eid-data/azurehound
+  - https://bloodhound.specterops.io/collect-data/ce-collection/azurehound
 ---

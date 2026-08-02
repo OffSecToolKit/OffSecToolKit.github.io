@@ -5,7 +5,7 @@ description: |
   Command Reference:
 
       IPMI hashes file: ipmi-hash.txt
-    
+
       Cracking wordlist: /usr/share/wordlists/rockyou.txt
 
 command: |

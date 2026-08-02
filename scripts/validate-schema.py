@@ -10,70 +10,45 @@ def parse_yaml(path):
         return yaml.load_all(text, Loader=yaml.SafeLoader)
 
 def build_schema():
-    service_names = next(parse_yaml('_data/services.yml')).keys()
-    item_names = next(parse_yaml('_data/items.yml')).keys()
-    OS_names = next(parse_yaml('_data/OS.yml')).keys()
-    phase_names = next(parse_yaml('_data/phases.yml')).keys()
+    service_names = list(next(parse_yaml('_data/services.yml')).keys())
+    item_names = list(next(parse_yaml('_data/items.yml')).keys())
+    OS_names = list(next(parse_yaml('_data/OS.yml')).keys())
+    phase_names = list(next(parse_yaml('_data/phases.yml')).keys())
     return {
-        "definitions": {
-            'examples': {
-                'type': 'array',
-                'items': {
-                    'type': 'object',
-                    'properties': {
-                        'description': {'type': 'string'},
-                        'code': {'type': 'string'},
-                    },
-                    'additionalProperties': False
-                },
-                'minimum': 1
-            }
-        },
         'type': 'object',
         'properties': {
             'description': {'type': 'string'},
             'command': {'type': 'string'},
             'items': {
                 'type': 'array',
-                "patternProperties": {
-                    '^({})$'.format('|'.join(item_names)): {'$ref': '#/definitions/examples'}
-                },
-                'additionalProperties': False
+                'items': {'enum': item_names},
             },
             'services': {
                 'type': 'array',
-                "patternProperties": {
-                    '^({})$'.format('|'.join(service_names)): {'$ref': '#/definitions/examples'}
-                },
-                'additionalProperties': False
+                'items': {'enum': service_names},
             },
             'OS': {
                 'type': 'array',
-                "patternProperties": {
-                    '^({})$'.format('|'.join(OS_names)): {'$ref': '#/definitions/examples'}
-                },
-                'additionalProperties': False
+                'items': {'enum': OS_names},
             },
             'phases': {
                 'type': 'array',
-                "patternProperties": {
-                    '^({})$'.format('|'.join(phase_names)): {'$ref': '#/definitions/examples'}
-                },
-                'additionalProperties': False
+                'items': {'enum': phase_names},
             },
             'references': {
                 'type': 'array',
-                'additionalProperties': False
+                'items': {'type': 'string'},
             }
         },
-        'required': ['items', 'command', 'OS', 'references'],
+        'required': ['description', 'command', 'items', 'OS', 'phases', 'references'],
         'additionalProperties': False
     }
 
 def validate_directory(root):
     schema = build_schema()
     root, _, files = next(os.walk(root))
-    for name in files:
+    failed = False
+    for name in sorted(files):
         if not name.endswith('.md'):
             continue
         path = os.path.join(root, name)
@@ -82,7 +57,9 @@ def validate_directory(root):
             jsonschema.validate(next(data), schema)
         except jsonschema.exceptions.ValidationError as err:
             print('{}: {}'.format(name, err))
-            sys.exit(1)
+            failed = True
+    if failed:
+        sys.exit(1)
 
 if __name__ == '__main__':
-   validate_directory("_OffSecToolKit/") 
+   validate_directory("_OffSecToolKit/")

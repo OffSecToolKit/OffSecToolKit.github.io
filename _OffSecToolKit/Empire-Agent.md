@@ -27,6 +27,6 @@ OS:
 phases:
   - PostExploitation
 references:
-  - https://bc-security.gitbook.io/empire-wiki/quickstart/listeners
+  - https://bc-security.gitbook.io/empire-wiki/listeners
   - https://github.com/BC-SECURITY/Empire
 ---

@@ -13,5 +13,5 @@ phases:
   - Enumeration
 references:
   - https://github.com/GhostPack/SafetyKatz
-  - https://www.harmj0y.net/blog/redteaming/ghostpack/
+  - https://blog.harmj0y.net/redteaming/ghostpack/
 ---

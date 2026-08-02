@@ -19,5 +19,4 @@ phases:
   - Exploitation
 references:
   - https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-a-reverse-shell-in-metasploit.html
-  - https://www.offsec.com/metasploit-unleashed/multi-handler/
 ---

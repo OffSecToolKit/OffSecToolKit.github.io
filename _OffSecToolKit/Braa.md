@@ -5,7 +5,7 @@ description: |
   Command Reference:
 
       Community string: public
-    
+
       Target: 10.10.10.1
 
 command: |

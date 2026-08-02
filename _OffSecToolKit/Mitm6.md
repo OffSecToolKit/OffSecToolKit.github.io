@@ -1,6 +1,6 @@
 ---
 description: |
-  mitm6 is a pentesting tool that exploits the default configuration of Windows to take over the default DNS server. It does this by replying to DHCPv6 messages, providing victims with a link-local IPv6 address and setting the attackers host as default DNS server. The following command will respond to DHCPv6 messages and set the DNS server to the attack host IP. Leverage this command with ntlmrelayx.py to capture the WPAD configuration requests. 
+  mitm6 is a pentesting tool that exploits the default configuration of Windows to take over the default DNS server. It does this by replying to DHCPv6 messages, providing victims with a link-local IPv6 address and setting the attackers host as default DNS server. The following command will respond to DHCPv6 messages and set the DNS server to the attack host IP. Leverage this command with ntlmrelayx.py to capture the WPAD configuration requests.
 
   Command Reference:
 

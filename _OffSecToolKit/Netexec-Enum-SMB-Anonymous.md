@@ -1,6 +1,6 @@
 ---
 description: |
-  "NetExec (a.k.a nxc) is a network service exploitation tool that helps automate assessing the security of large networks." - https://www.netexec.wiki/. This command will enumerate the SMB host using anonymous access. 
+  "NetExec (a.k.a nxc) is a network service exploitation tool that helps automate assessing the security of large networks." - https://www.netexec.wiki/. This command will enumerate the SMB host using anonymous access.
 
   Command Reference:
 

@@ -19,5 +19,4 @@ phases:
   - Enumeration
 references:
   - https://github.com/PowerShellMafia/PowerSploit/tree/master/Recon
-  - https://www.attackdebris.com/?p=470
 ---

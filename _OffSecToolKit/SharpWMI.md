@@ -18,5 +18,5 @@ phases:
   - Persistence
 references:
   - https://github.com/GhostPack/SharpWMI
-  - https://www.harmj0y.net/blog/redteaming/ghostpack/
+  - https://blog.harmj0y.net/redteaming/ghostpack/
 ---

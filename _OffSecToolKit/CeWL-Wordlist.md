@@ -16,6 +16,7 @@ command: |
   cewl http://10.10.10.1 -d 2 -m 5 -w wordlist.txt
 items:
   - No_Creds
+  - Wordlist
 services:
   - Web
 OS:

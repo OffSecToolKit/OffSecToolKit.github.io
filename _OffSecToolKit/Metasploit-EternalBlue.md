@@ -22,5 +22,5 @@ phases:
   - Exploitation
 references:
   - https://www.rapid7.com/db/modules/exploit/windows/smb/ms17_010_eternalblue/
-  - https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-metasploit.html
+  - https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-a-metasploit-module-appropriately.html
 ---

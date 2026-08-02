@@ -5,9 +5,9 @@ description: |
   Command Reference:
 
   	Domain: test.local
-    
+
   	Username: ldap
-    
+
   	Password: password123
 
 command: |
@@ -21,6 +21,7 @@ OS:
   - Linux
 phases:
   - Enumeration
+  - InfoCollection
 references:
   - https://linux.die.net/man/1/ldapsearch
 ---

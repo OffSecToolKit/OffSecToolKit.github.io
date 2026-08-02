@@ -25,5 +25,5 @@ phases:
   - Enumeration
 references:
   - https://github.com/BloodHoundAD/SharpHound3
-  - https://bloodhound.readthedocs.io/en/latest/data-collection/sharphound.html
+  - https://bloodhound.specterops.io/collect-data/ce-collection/sharphound
 ---

@@ -34,5 +34,4 @@ OS:
   - Windows
 references:
   - https://github.com/ropnop/go-windapsearch
-  - https://www.attackdebris.com/?p=470
 ---

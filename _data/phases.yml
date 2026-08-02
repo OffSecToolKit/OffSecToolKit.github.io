@@ -30,3 +30,7 @@ PostExploitation:
 Pivoting:
   label: Pivoting
   description: Commands focused on tunneling and pivoting through a compromised host to reach additional network segments.
+
+Persistence:
+  label: Persistence
+  description: Commands focused on maintaining access to a host or domain across reboots, credential rotation, or reconnection attempts.
